@@ -38,12 +38,11 @@ class _AllCoursesState extends State<AllCourses> {
                       leading: CircleAvatar(
                         child: Text("${courses[index]["hours"]}"),
                       ),
-                      title: Text(title),
+                      title: Text(title,style: TextStyle(color: Colors.white70),),
                       subtitle: Text(content.length>40?content.substring(0,40):content),
                       trailing: IconButton(icon: Icon(Icons.delete_forever_outlined), onPressed: () {
                         setState(() {
                           dbHelper.delete(courses[index]["id"]);
-
                         });
                       },
 
